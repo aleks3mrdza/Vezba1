@@ -1,14 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Vezba
 {
     class Program
     {
         static void Main()
+        {
+            Types();
+
+            Arrays();
+
+            Lists();
+        }
+
+        public static void Types()
         {
             int a, b, c, d, e;
 
@@ -47,8 +53,6 @@ namespace Vezba
 
             int res = a = ++b;
             Console.WriteLine(res);
-
-
 
             string s1, s2, s3, s4, s5;
             s1 = "aleks1";
@@ -91,8 +95,6 @@ namespace Vezba
 
             int increase = a1++;
 
-
-
             a1 = 7;
             a1 = -7856;
             a1 = 1456;
@@ -114,7 +116,10 @@ namespace Vezba
             bool b33 = false;
             bool b44 = true;
             bool b55 = true;
+        }
 
+        public static void Arrays()
+        {
             int[] intiger5 = new int[5];
             int[] intiger51 = new int[5] { 3, 2, 1, 2, 3 };
             int[] intiger52 = new int[5] { 4, 5, 7, 6, -5 };
@@ -130,12 +135,15 @@ namespace Vezba
             //Isčitaj vrednost petog elementa u nizu i smesti u novu promenljivu
             string s = string1[4];
             Console.WriteLine(s);
+        }
 
+        public static void Lists()
+        {
             //1. Kreiraj listu integera
             List<int> list1 = new List<int>();
 
             //2. Kreiraj listu integera i inicijalizuj listu
-            List<int> list2 = new List<int>{1, 2, 3, 2, 1};
+            List<int> list2 = new List<int> { 1, 2, 3, 2, 1 };
 
             //3. Dodaj 5 integera u listu, možeš dodati proizvoljne vrednost
             List<int> list3 = new List<int>();
@@ -153,14 +161,14 @@ namespace Vezba
             string11.Add("dgdf");
             string11.Add("htfh");
             string11.Add("dfhf");
+            string11.Insert(4, "dfhf");
 
             //6. Izbaci iz liste string "dgdf"
             string11.Remove("dgdf");
 
             //Bonus 7. Izbaci iz liste element sa index-om 0
             string11.Remove(string11[0]);
-
-            //
+            string11.RemoveAt(0);
         }
     }
 }

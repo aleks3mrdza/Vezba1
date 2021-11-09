@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
+
 namespace Vezba
 {
-    class Program
+    public class Program
     {
         static void Main()
         {
@@ -12,6 +13,38 @@ namespace Vezba
             Arrays();
 
             Lists();
+
+            FunThreeConsol("sa", "sfd", "dd");
+
+            FunStringArray("ili", "ja");
+
+            FunListOfString("ss", "df", "gh", " ", " ", " ", " ", " ", " ", " ");
+
+            FunIncrease(333);
+
+            FirstGreterThenThrd(1, "aliluja", 3);
+
+            FirstLessThenSecond(3, 1);
+
+            FirstGreterThenSecond(11, 31);
+
+            FunLong(9999999, 3333333, 777);
+
+            FunInteger3(13, 11, 31);
+
+            FunThreeConsol("as", "s", "hit");
+
+            FuncSixDoNothing(3, "tdi", '\u006a', "porok", 13, true);
+
+            FuncFiveDoNothng(11, 31, "drug", "stari", "ss");
+
+            FunInt2(13, 11);
+
+            FunInt(31, 13);
+
+            FunString("probudi se");
+
+            FunEmpety();
         }
 
         public static void Types()
@@ -154,7 +187,7 @@ namespace Vezba
             list3.Add(2);
 
             //4. Kreiraj listu stringova i inicijalizuj je
-            List<string> string11 = new List<string>();
+            List<string> string11 = new List<string>(5);
 
             //5. Dodaj u listu sledeće stringove "abvc", "dgdf", "htfh", "dfhf"
             string11.Add("abvc");
@@ -162,6 +195,7 @@ namespace Vezba
             string11.Add("htfh");
             string11.Add("dfhf");
             string11.Insert(4, "dfhf");
+            string11.Insert(7, "dfhf");
 
             //6. Izbaci iz liste string "dgdf"
             string11.Remove("dgdf");
@@ -170,5 +204,124 @@ namespace Vezba
             string11.Remove(string11[0]);
             string11.RemoveAt(0);
         }
+
+        //1. Kreiraj funkciju proizvoljnog imena koja ne vraca nista i nema ulaznih parametara
+        public static void FunEmpety() { }
+
+        //2. __koja vraca string i jedan ulazni parametar tipa string koji se vraca kao rezultat funkcije
+        public static string FunString(string s)
+        {
+            return s;
+        }
+
+        //3. __koja vraca integer, ima dva ulazna parametra, oba tipa int, 
+        //rezultat funkcije je proizvod dva parametra
+        public static int FunInt(int a, int b)
+        {
+            return a * b;
+        }
+
+        //4. __ne vraca nista, ima dva ulazna parametra tipa int, u funkciji se ispisuje u konzolu
+        //proizvod dva ulazna parametra.
+        public static void FunInt2(int a, int b)
+        {
+            Console.WriteLine(a * b);
+        }
+
+        //5. __ne vraca nista i ima pet ulaznih parametara, prva dva tipa int, ostali tipa string.
+        //Funkcija ne radi nista.
+        public static void FuncFiveDoNothng(int a, int b, string s1, string s2, string s3) { }
+
+        //6. __ne vraca nista i ima 6 ulaznih parametara,  prvi tipa int, drugi string, treci char,
+        //cetvrti string, peti int, sesti bool. Funkcija ne radi nista.
+        public static void FuncSixDoNothing(int a, string s1, char c1, string s2, int b, bool bolean) { }
+
+        //7. __ne vraca nista i ima tri ulazna parametara, sva tri tipa string. 
+        //Funkcija ispisuje u konzoli sva tri prosledjena parametra.
+        public static void FunThreeConsol(string s1, string s2, string s3)
+        {
+            Console.WriteLine(s1, s2, s3);
+        }
+
+        //8. __koja vraca zbir tri ulazna parametra koja su tipa int.
+        public static int FunInteger3(int a, int b, int c)
+        {
+            int res = a + b + c;
+            return res;
+        }
+
+        //9. __koja vraca zbir tri ulazna parametra koja su tipa long.
+        public static long FunLong(long l1, long l2, long l3)
+        {
+            return l1 + l2 + l3;
+        }
+
+        //10. __koja vraca da li je prvi ulazni parametar veci od drugog.
+        public static bool FirstGreterThenSecond(int num1, int num2)
+        {
+            return num1 > num2;
+        }
+
+        //11. __koja vraca da li je prvi ulazni parametar manji od drugog.
+        //Prvi parametar je tipa int, drugi isto.
+        public static bool FirstLessThenSecond(int par1, int par2)
+        {
+            return par1 < par2;
+        }
+
+        //12. __koja vraca da li je prvi ulazni parametar veci od treceg.
+        //Prvi parametar je tipa int, drugi tipa string, treci tipa int.
+        public static bool FirstGreterThenThrd(int par1, string s2, int par3)
+        {
+            return par1 > par3;
+        }
+
+        //13. __koja vraca vrednost ulaznog parametra uvecanu za jedan.
+        //Ulazni parametar je tipa int.
+        public static int FunIncrease(int increase)
+        {
+            return increase++;
+        }
+
+        //14. __koja vraca niz stringova. Ulazni parametri su dva stringa.
+        //Izlazni niz treba da sadrzi oba stringa.
+        public static string[] FunStringArray(string s1, string s2)
+        {
+            string[] twoStr = new string[2];
+            twoStr[0] = s1;
+            twoStr[1] = s2;
+            return twoStr;
+        }
+
+        //15. __koja vraca listu stringova. Ulazni parametri su 10 stringova.
+        //Izlazna lista treba da sadrzi svih deset stringova.
+        public static List<string> FunListOfString(string v1, string v2, string v3, string v4,
+        string v5, string v6, string v7, string v8, string v9, string v10)
+        {
+            List<string> Student = new List<string>(10);
+            {
+                Student.Add(v1);
+                Student.Add(v2);
+                Student.Add(v3);
+                Student.Add(v4);
+                Student.Add(v5);
+                Student.Add(v6);
+                Student.Add(v7);
+                Student.Add(v8);
+                Student.Add(v9);
+                Student.Add(v10);
+                Student.Add("");
+            }
+            return Student;
+        }
+
+        //16. __Pozovi sve funkcije
     }
+
+
+
+
+
+
 }
+

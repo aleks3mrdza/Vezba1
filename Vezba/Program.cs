@@ -14,6 +14,8 @@ namespace Vezba
 
             Lists();
 
+            Loops();
+
             FunThreeConsol("sa", "sfd", "dd");
 
             FunStringArray("ili", "ja");
@@ -83,6 +85,9 @@ namespace Vezba
             bool res6 = true;
             res6 = res3 && res4;
             Console.WriteLine(res6);
+
+            int number10 = 10;
+            bool isNumber10 = number10 == 10 ? true : false;
 
             int res = a = ++b;
             Console.WriteLine(res);
@@ -156,6 +161,11 @@ namespace Vezba
             int[] intiger5 = new int[5];
             int[] intiger51 = new int[5] { 3, 2, 1, 2, 3 };
             int[] intiger52 = new int[5] { 4, 5, 7, 6, -5 };
+
+            int[] list = { 29, 16, 33, 97 };
+            Array.Reverse(list);
+            Console.WriteLine(list);
+
             bool res8 = intiger52[2] > intiger52[1];
             Console.WriteLine(res8);
 
@@ -521,6 +531,25 @@ namespace Vezba
             {
                 Console.WriteLine("Vrednost je manja od 5");
             }
+
+            // Ispisati brojeve od 1 do 100 koristeci while petlju
+            int start = 1;
+
+            while (start <= 100)
+            {
+                start++;
+            }
+
+            //Izracunati zbir prvih 100 brojeva koresteci while petlju
+            int start1 = 0;
+            int sum;
+
+            while (start1 <= 100) ;
+            {
+                start1++;
+                sum = start1 + 1;
+            }
+
 
         }
     }

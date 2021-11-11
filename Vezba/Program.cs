@@ -1,14 +1,53 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Vezba
 {
-    class Program
+    public class Program
     {
         static void Main()
+        {
+            Types();
+
+            Arrays();
+
+            Lists();
+
+            FunThreeConsol("sa", "sfd", "dd");
+
+            FunStringArray("ili", "ja");
+
+            FunListOfString("ss", "df", "gh", " ", " ", " ", " ", " ", " ", " ");
+
+            FunIncrease(333);
+
+            FirstGreterThenThrd(1, "aliluja", 3);
+
+            FirstLessThenSecond(3, 1);
+
+            FirstGreterThenSecond(11, 31);
+
+            FunLong(9999999, 3333333, 777);
+
+            FunInteger3(13, 11, 31);
+
+            FunThreeConsol("as", "s", "hit");
+
+            FuncSixDoNothing(3, "tdi", '\u006a', "porok", 13, true);
+
+            FuncFiveDoNothng(11, 31, "drug", "stari", "ss");
+
+            FunInt2(13, 11);
+
+            FunInt(31, 13);
+
+            FunString("probudi se");
+
+            FunEmpety();
+        }
+
+        public static void Types()
         {
             int a, b, c, d, e;
 
@@ -17,21 +56,36 @@ namespace Vezba
             c = 3;
             d = 4;
             e = 5;
-            
+
+            if (a > b)
+            {
+                Console.WriteLine("a je vece od b");
+            }
+            else if (a == b)
+            {
+                Console.WriteLine("a je jednako b");
+            }
+            else
+            {
+                Console.WriteLine("a nije vece od b");
+            }
+
             bool res3 = a > b;
             Console.WriteLine(res3);
 
             bool res4 = a == b;
             Console.WriteLine(res4);
-            
+
             bool res5 = true;
             res5 = res3 || res4;
             Console.WriteLine(res5);
 
+            bool res6 = true;
+            res6 = res3 && res4;
+            Console.WriteLine(res6);
+
             int res = a = ++b;
             Console.WriteLine(res);
-
-            
 
             string s1, s2, s3, s4, s5;
             s1 = "aleks1";
@@ -62,19 +116,17 @@ namespace Vezba
             //SABIRANJE
             int resault = a3 + a4 + a5;
             Console.WriteLine(resault);
-            //ODUYIMANJE
-            int resault1 = a1 + a2;
+            //ODUZIMANJE
+            int resault1 = a1 - a2;
             Console.WriteLine(resault1);
             //MNOZENJE
             int resault2 = a1 * a1 * a2 * a4;
             Console.WriteLine(resault2);
             //Deljenje
-            int resault3 = a4 * a4;
+            int resault3 = a4 / a4;
             Console.WriteLine(resault3);
 
             int increase = a1++;
-
-
 
             a1 = 7;
             a1 = -7856;
@@ -86,19 +138,190 @@ namespace Vezba
             string s41 = "adsd";
             string s51 = "ad";
 
-            char c11 = c11 = 'a';
-            char c22 =c22 = '*';
-            char c33 = c33 = '1';
-            char c44 = c44 = '\"';
-            char c55 = c55 = '\n';
+            char c11 = 'a';
+            char c22 = '*';
+            char c33 = '1';
+            char c44 = '\"';
+            char c55 = '\n';
 
-            bool b11 = b11 = true;
-            bool b22 = b22 = true;
-            bool b33 = b33 = false;
-            bool b44 = b44 = true;
-            bool b55 = b55 = true;
-
-             
+            bool b11 = true;
+            bool b22 = true;
+            bool b33 = false;
+            bool b44 = true;
+            bool b55 = true;
         }
+
+        public static void Arrays()
+        {
+            int[] intiger5 = new int[5];
+            int[] intiger51 = new int[5] { 3, 2, 1, 2, 3 };
+            int[] intiger52 = new int[5] { 4, 5, 7, 6, -5 };
+            bool res8 = intiger52[2] > intiger52[1];
+            Console.WriteLine(res8);
+
+            /*4. Kreiraj niz stringova veličine 9;
+            Na prvu poziciju u nizu postavi vrednost "abcd"
+            Na devetu poziciju u nizu postavi vrednost "abcd 9"*/
+            string[] string1 = new string[9];
+            string1[0] = "abcd";
+            string1[8] = "abcd 9";
+            //Isčitaj vrednost petog elementa u nizu i smesti u novu promenljivu
+            string s = string1[4];
+            Console.WriteLine(s);
+        }
+
+        public static void Lists()
+        {
+            //1. Kreiraj listu integera
+            List<int> list1 = new List<int>();
+
+            //2. Kreiraj listu integera i inicijalizuj listu
+            List<int> list2 = new List<int> { 1, 2, 3, 2, 1 };
+
+            //3. Dodaj 5 integera u listu, možeš dodati proizvoljne vrednost
+            List<int> list3 = new List<int>();
+            list3.Add(2);
+            list3.Add(1);
+            list3.Add(3);
+            list3.Add(1);
+            list3.Add(2);
+
+            //4. Kreiraj listu stringova i inicijalizuj je
+            List<string> string11 = new List<string>(5);
+
+            //5. Dodaj u listu sledeće stringove "abvc", "dgdf", "htfh", "dfhf"
+            string11.Add("abvc");
+            string11.Add("dgdf");
+            string11.Add("htfh");
+            string11.Add("dfhf");
+            string11.Insert(4, "dfhf");
+            string11.Insert(7, "dfhf");
+
+            //6. Izbaci iz liste string "dgdf"
+            string11.Remove("dgdf");
+
+            //Bonus 7. Izbaci iz liste element sa index-om 0
+            string11.Remove(string11[0]);
+            string11.RemoveAt(0);
+        }
+
+        //1. Kreiraj funkciju proizvoljnog imena koja ne vraca nista i nema ulaznih parametara
+        public static void FunEmpety() { }
+
+        //2. __koja vraca string i jedan ulazni parametar tipa string koji se vraca kao rezultat funkcije
+        public static string FunString(string s)
+        {
+            return s;
+        }
+
+        //3. __koja vraca integer, ima dva ulazna parametra, oba tipa int, 
+        //rezultat funkcije je proizvod dva parametra
+        public static int FunInt(int a, int b)
+        {
+            return a * b;
+        }
+
+        //4. __ne vraca nista, ima dva ulazna parametra tipa int, u funkciji se ispisuje u konzolu
+        //proizvod dva ulazna parametra.
+        public static void FunInt2(int a, int b)
+        {
+            Console.WriteLine(a * b);
+        }
+
+        //5. __ne vraca nista i ima pet ulaznih parametara, prva dva tipa int, ostali tipa string.
+        //Funkcija ne radi nista.
+        public static void FuncFiveDoNothng(int a, int b, string s1, string s2, string s3) { }
+
+        //6. __ne vraca nista i ima 6 ulaznih parametara,  prvi tipa int, drugi string, treci char,
+        //cetvrti string, peti int, sesti bool. Funkcija ne radi nista.
+        public static void FuncSixDoNothing(int a, string s1, char c1, string s2, int b, bool bolean) { }
+
+        //7. __ne vraca nista i ima tri ulazna parametara, sva tri tipa string. 
+        //Funkcija ispisuje u konzoli sva tri prosledjena parametra.
+        public static void FunThreeConsol(string s1, string s2, string s3)
+        {
+            Console.WriteLine(s1, s2, s3);
+        }
+
+        //8. __koja vraca zbir tri ulazna parametra koja su tipa int.
+        public static int FunInteger3(int a, int b, int c)
+        {
+            int res = a + b + c;
+            return res;
+        }
+
+        //9. __koja vraca zbir tri ulazna parametra koja su tipa long.
+        public static long FunLong(long l1, long l2, long l3)
+        {
+            return l1 + l2 + l3;
+        }
+
+        //10. __koja vraca da li je prvi ulazni parametar veci od drugog.
+        public static bool FirstGreterThenSecond(int num1, int num2)
+        {
+            return num1 > num2;
+        }
+
+        //11. __koja vraca da li je prvi ulazni parametar manji od drugog.
+        //Prvi parametar je tipa int, drugi isto.
+        public static bool FirstLessThenSecond(int par1, int par2)
+        {
+            return par1 < par2;
+        }
+
+        //12. __koja vraca da li je prvi ulazni parametar veci od treceg.
+        //Prvi parametar je tipa int, drugi tipa string, treci tipa int.
+        public static bool FirstGreterThenThrd(int par1, string s2, int par3)
+        {
+            return par1 > par3;
+        }
+
+        //13. __koja vraca vrednost ulaznog parametra uvecanu za jedan.
+        //Ulazni parametar je tipa int.
+        public static int FunIncrease(int increase)
+        {
+            return increase++;
+        }
+
+        //14. __koja vraca niz stringova. Ulazni parametri su dva stringa.
+        //Izlazni niz treba da sadrzi oba stringa.
+        public static string[] FunStringArray(string s1, string s2)
+        {
+            string[] twoStr = new string[2];
+            twoStr[0] = s1;
+            twoStr[1] = s2;
+            return twoStr;
+        }
+
+        //15. __koja vraca listu stringova. Ulazni parametri su 10 stringova.
+        //Izlazna lista treba da sadrzi svih deset stringova.
+        public static List<string> FunListOfString(string v1, string v2, string v3, string v4,
+        string v5, string v6, string v7, string v8, string v9, string v10)
+        {
+            List<string> Student = new List<string>(10);
+            {
+                Student.Add(v1);
+                Student.Add(v2);
+                Student.Add(v3);
+                Student.Add(v4);
+                Student.Add(v5);
+                Student.Add(v6);
+                Student.Add(v7);
+                Student.Add(v8);
+                Student.Add(v9);
+                Student.Add(v10);
+                Student.Add("");
+            }
+            return Student;
+        }
+
+        //16. __Pozovi sve funkcije
     }
+
+
+
+
+
+
 }
+

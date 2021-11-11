@@ -316,6 +316,213 @@ namespace Vezba
         }
 
         //16. __Pozovi sve funkcije
+        //Funkcije pozvane u Main klasi
+
+
+        public static void Loops()
+        {
+            //1. Definisi promenljivu tipa integer sa proizvoljnom vrednošću.
+            //Ako je vrednost veća od 5 ispiši u konzoli vrednost je veća od 5,
+            //inače ispiši vredost je manja od 5.
+            int a = 31;
+
+            if (a > 5)
+            {
+                Console.WriteLine("Vrednost je vece od 5");
+            }
+            else
+            {
+                Console.WriteLine("Vrednost je manja od 5");
+            }
+
+            //2.Definisi promenljivu tipa string sa proizvoljnom vrednošću.
+            //Ako je vrednost jednaka "abcdfg" ispiši u konzoli vrednost je "abcdfg",
+            //inače ispiši vredost nije "abcdfg".
+            string v = "abcdfg";
+
+            if (v == "abcdfg")
+            {
+                Console.WriteLine("Vrednost je jednaka abcdfg");
+            }
+            else
+            {
+                Console.WriteLine("Vrednos nije abcdfg");
+            }
+
+            //3.Definisi promenljivu tipa char sa proizvoljnom vrednošću.
+            //Ako je vrednost jednaka "n" ispiši u konzoli vrednost je "n",
+            //inače ispiši vredost nije "n".
+            char c = 'x';
+
+            if (c == 'n')
+            {
+                Console.WriteLine("Vrednost je n");
+            }
+            else
+            {
+                Console.WriteLine("Vrednost nije n");
+            }
+
+            //4.Definisi promenljivu tipa bool sa proizvoljnom vrednošću.
+            //Ako je vrednost true ispiši u konzoli vrednost je true,
+            //inače ispiši vredost je false.
+            bool bolean = true;
+
+            if (bolean == true)
+            {
+                Console.WriteLine("Vrednos je true");
+            }
+            else
+            {
+                Console.WriteLine("Vrednost nije true");
+            }
+
+            //5.Definisi promenljivu tipa integer sa proizvoljnom vrednošću.
+            //Ako je vrednost veća od 5 ispiši u konzoli vrednost je veća od 5,
+            //ako je vrednost jednaka 5 ispiši u konzoli vrednost je jednaka 5,
+            //inače ispiši vredost je manja od 5.
+            int integer = 39931;
+
+            if (integer > 5)
+            {
+                Console.WriteLine("Vrednos je veca od 5");
+            }
+            else if (integer == 5)
+            {
+                Console.WriteLine("Vrednost je jednaka 5");
+            }
+            else
+            {
+                Console.WriteLine("Vrednost je manja od 5");
+            }
+
+            //6.Definisi dve promenljivu tipa integer sa proizvoljnim vrednostima.
+            //Ako je vrednost prve promenljive veća od 5 ispiši u konzoli vrednost je veća od 5.
+            //Ako je vrednost druge promenljive veća od 5 ispiši u konzoli vrednost je veća od 5.
+            int integer1 = 5;
+            int integer3 = 3;
+            if (integer1 > 5)
+            {
+                Console.WriteLine("Vrednost je veca od 5");
+            }
+
+            if (integer3 > 5)
+            {
+                Console.WriteLine("Vrednost je veca od 5");
+            }
+
+            //7.Definisi dve promenljivu tipa integer sa proizvoljnim vrednostima.
+            //Ako je vrednost prve promenljive veća od 7 ispiši u konzoli vrednost je veća od 7.
+            //Ako je vrednost druge promenljive veća od 9 ispiši u konzoli vrednost je veća od 9,
+            //inače ispiši vredost je manja od 9.
+            int integer4 = 23213;
+            int integer5 = 7;
+
+            if (integer4 > 7)
+            {
+                Console.WriteLine("Vrednost je veca od 7");
+            }
+
+            if (integer5 > 9)
+            {
+                Console.WriteLine("Vrednost je veca od 9");
+            }
+            else
+            {
+                Console.WriteLine("Vrednost je manja od 9");
+            }
+
+            //9.Definisi dve promenljivu tipa integer i string sa proizvoljnim vrednostima.
+            //Ako je vrednost prve promenljive veća od 7 i vrednost druge promenljive jednaka "rtyu"
+            //ispiši u konzoli vrednost prve promenljive je veća od 7 i vrednost druge promenljive je jednaka "rtyu".
+            int num13 = 8;
+            string s = "rtyu";
+
+            if (num13 > 7 && s == "rtyu")
+            {
+                Console.WriteLine("Vrednost prve promenljive je veca od 7 i vrednost druge promenljive jednaka je rtyu");
+            }
+
+            //10.Definisi promenljivu tipa integer sa proizvoljnom vrednošću.
+            //Ako je vrednost veća od 5 ispiši u konzoli vrednost je veća od 5,
+            //inače ako je vrednost veća od 7 ispiši u konzoli vrednost je veća 7,
+            //inače ako je vrednost veća od 9 ispiši u konzoli vrednost je veća 9,
+            //inače ako je vrednost veća od 10 ispiši u konzoli vrednost je veća 10,
+            //inače ako je vrednost veća od 12 ispiši u konzoli vrednost je veća 12,
+            //inače ako je vrednost veća od 13 ispiši u konzoli vrednost je veća 13,
+            //inače ako je vrednost veća od 14 ispiši u konzoli vrednost je veća 14,
+            //inače ako je vrednost veća od 17 ispiši u konzoli vrednost je veća 17,
+            //inače ako je vrednost veća od 19 ispiši u konzoli vrednost je veća 19,
+            //inače ako je vrednost veća od 24 ispiši u konzoli vrednost je veća 24,
+            //inače ako je vrednost veća od 25 ispiši u konzoli vrednost je veća 25,
+            //inače ako je vrednost veća od 26 ispiši u konzoli vrednost je veća 26,
+            //inače ako je vrednost veća od 28 ispiši u konzoli vrednost je veća 28,
+            //inače ako je vrednost veća od 29 ispiši u konzoli vrednost je veća 29,
+            //inače ispiši vredost je manja od 5.
+            int num23 = 23;
+
+            if (num23 > 5)
+            {
+                Console.WriteLine("Vrednost je veca od 5");
+            }
+            else if (num23 > 7)
+            {
+                Console.WriteLine("Vrednost je veca od 7");
+            }
+            else if (num23 > 9)
+            {
+                Console.WriteLine("Vrednost je veca od 9");
+            }
+            else if (num23 > 10)
+            {
+                Console.WriteLine("Vrednost je veca od 10");
+            }
+            else if (num23 > 12)
+            {
+                Console.WriteLine("Vrednost je veca od 12");
+            }
+            else if (num23 > 13)
+            {
+                Console.WriteLine("Vrednost je veca od 13");
+            }
+            else if (num23 > 14)
+            {
+                Console.WriteLine("Vrednost je veca od 14");
+            }
+            else if (num23 > 17)
+            {
+                Console.WriteLine("Vrednost je veca od 17");
+            }
+            else if (num23 > 19)
+            {
+                Console.WriteLine("Vrednost je veca od 19");
+            }
+            else if (num23 > 24)
+            {
+                Console.WriteLine("Vrednost je veca od 24");
+            }
+            else if (num23 > 25)
+            {
+                Console.WriteLine("Vrednos je veca od 25");
+            }
+            else if (num23 > 26)
+            {
+                Console.WriteLine("Vrednost je veca od 26");
+            }
+            else if (num23 > 28)
+            {
+                Console.WriteLine("Vrednost je veca od 28");
+            }
+            else if (num23 > 29)
+            {
+                Console.WriteLine("Vrednost je veca od 29");
+            }
+            else
+            {
+                Console.WriteLine("Vrednost je manja od 5");
+            }
+
+        }
     }
 
 

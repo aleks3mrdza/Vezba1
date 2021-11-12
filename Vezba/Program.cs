@@ -533,21 +533,23 @@ namespace Vezba
             }
 
             // Ispisati brojeve od 1 do 100 koristeci while petlju
-            int start = 1;
+            int start = 0;
 
-            while (start <= 100)
+            while (start < 100)
             {
                 start++;
+                Console.WriteLine(start);
             }
 
             //Izracunati zbir prvih 100 brojeva koresteci while petlju
-            int start1 = 0;
-            int sum;
+            int startNum = 0;
+            int sum = 0;
 
-            while (start1 <= 100) ;
+            while (startNum < 100)
             {
-                start1++;
-                sum = start1 + 1;
+                sum = sum + startNum;
+                startNum++;
+                Console.WriteLine(sum);
             }
 
 

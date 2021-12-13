@@ -552,6 +552,63 @@ namespace Vezba
                 Console.WriteLine(sum);
             }
 
+            //Vezba switch1
+            string s21 = "tri";
+
+            switch (s21)
+            {
+                case "jedan":
+                    Console.WriteLine("jedan");
+                    break;
+
+                case "dva":
+                    Console.WriteLine("dva");
+                    break;
+
+                case "tri":
+                    Console.WriteLine("tri");
+                    break;
+
+                case "cetiri":
+                    Console.WriteLine("cetiri");
+                    break;
+
+                case "pet":
+                    Console.WriteLine("pet");
+                    break;
+                default:
+                    Console.WriteLine("Vrednost stringa nije od jedan do pet");
+                    break;
+
+            }
+
+            //Vezba switch2
+            int br1 = 3;
+            int br2 = -1;
+            string rezultat = "razlika";
+
+            switch (rezultat)
+            {
+                case "zbir":
+                    int zbir = br1 + br2;
+                    Console.WriteLine("Zbir je", zbir);
+                    break;
+
+                case "razlika":
+                    int razlika = br1 - br2;
+                    Console.WriteLine("Razlika je", razlika);
+                    break;
+
+                case "proizvod":
+                    int proizvod = br1 * br2;
+                    Console.WriteLine("Proizvod je", proizvod);
+                    break;
+
+                case "kolicnik":
+                    int kolicnik = br1 / br2;
+                    Console.WriteLine("Kolicnik je", kolicnik);
+                    break;
+            }
 
         }
     }
